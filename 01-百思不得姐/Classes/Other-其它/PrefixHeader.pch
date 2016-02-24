@@ -1,0 +1,25 @@
+//
+//  PrefixHeader.pch
+//  01-百思不得姐
+//
+//  Created by Cass on 16/2/16.
+//  Copyright © 2016年 Cass. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+
+#import "UIView+CQTExtension.h"
+#import "UIBarButtonItem+CQTExtension.h"
+
+#ifdef DEBUG
+#define CQTLog(...) NSLog(__VA_ARGS__)
+#else
+#define CQTLog(...)
+#endif
+
+#define CQTLogFunc CQTLog(@"%s",__func__)
+#define CQTRGBColor(r,g,b) [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1.0]
+#define CQTGlobalBg CQTRGBColor(223,223,223)
+#endif /* PrefixHeader_pch */
